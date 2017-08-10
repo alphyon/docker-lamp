@@ -21,7 +21,7 @@ RUN apt-get install -y software-properties-common
 RUN export LANG=C.UTF-8 && add-apt-repository -y ppa:ondrej/php 
 RUN apt-get update
 RUN apt-get install -y apache2 libapache2-mod-php7.1
-RUN apt-get install -y php7.1-fpm php7.1 php7.1-mysql php7.1-sqlite3 php7.1-pgsql php7.0-curl php7.1-mcrypt php7.1-intl php7.0-bz2 php7.1-imap php7.1-gd php7.1-json php7.1-mbstring php7.1-ldap php7.1-zip php7.1-xml php7.1-soap
+RUN apt-get install -y php7.1-fpm php7.1 php7.1-mysql php7.1-sqlite3 php7.1-pgsql php7.0-curl php7.1-mcrypt php7.1-intl php7.1-bz2 php7.1-imap php7.1-gd php7.1-json php7.1-mbstring php7.1-ldap php7.1-zip php7.1-xml php7.1-soap
 RUN apt-get install -y wget curl python
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs
