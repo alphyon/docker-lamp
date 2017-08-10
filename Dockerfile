@@ -18,6 +18,8 @@ RUN echo mysql-server mysql-server/root_password_again select devpruebas | debco
 RUN apt-get install -y apt-utils
 RUN apt-get install -y mysql-server mysql-client
 RUN apt-get install -y software-properties-common
+RUN locale-gen en_US.UTF-8
+RUN export LANG=en_US.UTF-8
 RUN add-apt-repository -y ppa:ondrej/php 
 RUN apt-get update
 RUN apt-get install -y apache2 libapache2-mod-php7.1
