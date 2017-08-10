@@ -61,16 +61,6 @@ else
         echo "All is well.";
 fi
 
-UP=$(pgrep webmin | wc -l);
-if [ "$UP" -ne 1 ];
-then
-        echo "webmin is down.";
-        service webmin  start
-
-else
-        echo "All is well.";
-fi
-
 # Run Apache:
 if [ $LOG_LEVEL == 'debug' ]; then
     /usr/sbin/apachectl -DFOREGROUND -k start -e debug
