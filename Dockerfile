@@ -17,6 +17,7 @@ RUN echo mysql-server mysql-server/root_password select devpruebas | debconf-set
 RUN echo mysql-server mysql-server/root_password_again select devpruebas | debconf-set-selections
 RUN apt-get install -y apt-utils
 RUN apt-get install -y mysql-server mysql-client
+RUN apt-get install -y software-properties-common
 RUN add-apt-repository -y ppa:ondrej/php 
 RUN apt-get update
 RUN apt-get install -y apache2 libapache2-mod-php7.1
