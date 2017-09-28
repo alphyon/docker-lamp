@@ -40,6 +40,7 @@ ENV DATE_TIMEZONE UTC
 ENV TERM dumb
 RUN a2enmod rewrite
 RUN chown -R www-data:www-data /var/www/html
+RUN chown -R mysql:mysql /var/lib/mysql /var/run/mysqld
 RUN apt-get --purge autoremove
 VOLUME ["/var/www/html"]
 COPY ./config/docker-entrypoint.sh /usr/local/bin/
